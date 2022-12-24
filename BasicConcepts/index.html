@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="DomStyles.css" />
+  </head>
+  <body>
+    <!-- <button onclick="showDate()">Show</button> -->
+    <!-- <p id="show"></p> -->
+
+    <div
+      class="MainBox"
+      id="mainbox"
+      onmouseenter="MouseEnter()"
+      onmouseleave="MouseLeave()"
+    >
+      <div class="ChildBox" id="childbox">
+        <p id="FirstPara" onmouseup="OnMouseUp()" onmousedown="OnMouseDown()">
+          First Paragraph
+        </p>
+      </div>
+      <div class="ChildBox" id="childbox">
+        <p>This is second paragraph</p>
+      </div>
+      <div class="ChildBox" id="childbox">
+        <p>This is third paragraph</p>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+
+      <input
+        id="i"
+        type="text"
+        onkeypress="KeyPress()"
+        onkeyup="KeyUp()"
+        onkeydown="KeyDown()"
+      />
+
+      <p class="SecondBox" id="para">ee</p>
+    </div>
+
+    <div>
+      <label for="">Name</label>
+      <input type="text" id="ice" name="" />
+      <br />
+      <label for=""
+        >Choose flavour
+        <select id="icecreams" name="icecreams" >
+          <option value="">Select one</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="strawberry">Strawberry</option>
+          <option value="vanilla">Vanilla</option>
+        </select>
+      </label>
+      <br />
+      <div id="result"></div>
+    </div>
+
+    <script src="dom.js">
+      // function showDate(){
+      //     var date = new Date();
+      //     date.setHours(9)
+      //     date.setMinutes(45)
+      //     document.getElementById("show").innerHTML = date;
+      // }
+
+      // setInterval(()=>{
+      //     var date = new Date();
+      //     // date.setHours(9)
+      //     // date.setMinutes(45)
+      //     document.getElementById("show").innerHTML = date;
+
+      // },1000)
+    </script>
+  </body>
+</html>
