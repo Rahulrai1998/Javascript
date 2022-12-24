@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Interval</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <p id="para"></p>
+      <button id="start" onclick="show()">Start</button>
+      <button id="stop" onclick="end()">Stop</button>
+    </div>
+
+    <script>
+      const para = document.getElementById("para");
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+
+      let num = 0;
+      let a;
+
+      const show = () => {
+        a = setInterval(() => {
+          para.innerHTML = ++num;
+        }, 1000);
+      };
+      const end = () => {
+        clearInterval(a);
+        para.innerHTML = "Finished";
+      };
+    </script>
+  </body>
 </html>
