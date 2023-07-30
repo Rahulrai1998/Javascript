@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #parent {
+        background-color: aqua;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #child {
+        background-color: brown;
+        width: 50%;
+        height: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child" style="background-color: brown; width: 50%; height: 50%">
+     
+      </div>
+    </div>
+
+    <script>
+      parent = document.getElementById("parent");
+      child = document.getElementById("child");
+
+      const clickParent = () => {
+        alert("PARENT");
+      };
+      const clickChild = () => {
+        alert("CHILD");
+        // event.stopPropagation()
+      };
+
+      parent.addEventListener("click", clickParent , true);
+      child.addEventListener("click", clickChild , true);
+    </script>
+  </body>
+</html>
